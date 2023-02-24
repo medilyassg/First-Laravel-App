@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+/* header styles */
+.menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: blueviolet;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+}
+.menu ul{
+    display: flex ;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 50%;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+
+}
+/* liste posts style */
+.posts{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    margin-top: 10vh;
+}
+.title{
+    text-align: center;
+    margin-top: 5vh;
+}
+
+/* post styles */
+.post{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;   
+}
+.post p {
+    text-align: justify;
+    padding: 10px;
+    color: #666;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.post a:first-of-type{
+    text-decoration: none;
+    color:black
+    
+}
+/* details post styles  */
+
+.postDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.userinfo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.userinfo img{
+    width: 10%;
+    border-radius: 50px;
+}
+.postinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.postinfo p {
+    text-align: justify;
+    padding: 10px;
+    font-size: large    ;
+    color: #444;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.comment{
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(204, 171, 235);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+/* Footer styles */
+.footer{
+    text-align: center;
+    color: #666;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}   
