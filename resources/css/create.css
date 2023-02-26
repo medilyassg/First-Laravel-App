@@ -1,0 +1,83 @@
+*{
+    font-family: cursive;
+}
+form{
+    width: 50%;
+    margin: auto;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+form h2{
+    text-align: center;
+    font-weight: bold;
+    color: blueviolet;
+}
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+    margin: auto;
+    font-size: large;
+}
+.title label{
+        text-transform: capitalize;
+        font-weight: bold;
+}
+.title input{
+    height: 5vh;
+    font-size: 1em;
+    padding: 5px;
+    padding-left: 10px;
+    outline: none;
+    border: 0.5px solid rgba(27, 31, 35, 0.15);
+    border-radius: 10px;
+    color: #666;
+}
+.title input:focus{
+    border: 1px solid blueviolet;
+}
+
+.content label{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.content textarea{
+    height: 10vh;
+    font-size: 1em;
+    padding: 5px;
+    padding-left: 10px;
+    outline: none;
+    border: 0.5px solid rgba(27, 31, 35, 0.15);
+    border-radius: 10px;
+    color: #666;
+}
+.content textarea:focus{
+    border: 1px solid blueviolet;
+
+}
+.submit input{
+    padding: 5px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: blueviolet;
+    color: white;
+}
+.submit input:active{
+    background-color: rgb(149, 94, 201);
+}
+.error{
+    background-color: rgb(245, 178, 178);
+    padding: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: red;
+    border-radius: 10px;
+}

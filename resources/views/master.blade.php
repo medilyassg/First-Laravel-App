@@ -1,7 +1,7 @@
 <html>
     <head>
         @yield('meta')
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+        @vite(['resources/css/style.css'])
     </head>
     <body>
        

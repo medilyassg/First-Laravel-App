@@ -10,7 +10,8 @@
 @section('content')
     <div class="postDetails">
         <div class="userinfo">
-            <img src="{{ asset('images/user.png') }}" alt="">
+            @vite(['resources/images/'])
+            <img src="user.png" >
             <p>{{$post->user->name}}</p>
         </div>
         <div class="postinfo">

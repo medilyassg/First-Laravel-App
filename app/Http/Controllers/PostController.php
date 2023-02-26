@@ -23,7 +23,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('Posts.create');
     }
 
     /**
@@ -31,7 +31,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData= $request->validate([
+            'title'=>'required|max:255',
+            'content'=>'required',
+        ]);
+         $post=new Post;
+         $post->title=$validatedData['title'];
+         $post->content=$validatedData['content'];
+         $post->user_id=rand(1,10);
+         $post->save();
+         
+         return redirect("/posts");
     }
 
     /**
@@ -47,15 +57,25 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('Posts.edit',[
+            'post' =>Post::where('id',$id)->first()
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        
+    {   
+        $validatedData=$request->validate([
+            'title'=>'required|max:255',
+            'content'=>'required'
+        ]);
+        Post::where('id',$id)->update([
+            'title'=>$validatedData['title'],
+            'content'=>$validatedData['content']
+        ]);
+        return redirect('/posts');
     }
 
     /**
@@ -63,6 +83,7 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Post::destroy($id);
+        return redirect('/posts');
     }
 }

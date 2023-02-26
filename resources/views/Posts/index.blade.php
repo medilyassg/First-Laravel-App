@@ -10,7 +10,7 @@
 @section('content')
 
 
-<h1 class="title">Liste des Posts : </h1>
+<h1 class="title">Liste des Posts : </h1> <a href="/posts/create" class="new">New Post</a>
 @if (count($posts)>0)
 <div class="posts">
     
@@ -21,7 +21,19 @@
                 <p>{{  Str::substr($post->content,0, 100   ) }}</p>
                 <small>Publie a : {{ $post->created_at->format("d/m/Y H:i:s") }}</small>
                 <a href="{{ route('posts.show',$post) }}"><h5>Details</h5></a>
+                <a href="{{ route('posts.edit',$post->id) }}" class="edit">Edit</a>
+                <form action="{{ route('posts.delete',$post->id) }}" method="post" id="form">
+                    @csrf
+                    @method('DELETE')
+                    <button class='delete' type="submit">Delete</button>
+                </form>
+
+
+
+
+                    
             </div>
+
             
         @endforeach
     

@@ -55,11 +55,12 @@
     color: #666;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.post a:first-of-type{
+.post a{
     text-decoration: none;
     color:black
     
 }
+
 /* details post styles  */
 
 .postDetails{
@@ -110,6 +111,15 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
+.new{
+    text-decoration: none;
+    background-color: rgb(100, 100, 249);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    float: right;
+    margin-right: 150px;
+}
 /* Footer styles */
 .footer{
     text-align: center;
@@ -118,3 +128,29 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }   
+
+
+.edit{
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 50px ;
+    color: white;
+    text-decoration: none;
+    background-color: greenyellow;
+
+}
+.delete{
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 60px ;
+    color: white;
+    text-decoration: none;
+    background-color: red;
+}
+
